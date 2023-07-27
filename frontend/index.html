@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange Rate Alert</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>alert-curr</h1>
+        <div class="exchange-form">
+            <label id="fromCurrency" value="EUR">From Currency: Euro (EUR)</label>
+
+            <label for="toCurrency">To Currency:</label>
+            <select id="toCurrency" required>
+                <option value="INR">Indian Rupee (INR)</option>
+                <option value="USD">US Dollar (USD)</option>
+                <option value="MXN">Mexican Peso (MXN)</option>
+                <option value="CAD">Canadian Dollar (CAD)</option>
+                <option value="GBP">Great Britain Pound (GBP)</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <label for="phoneNumber">Phone Number or Email:</label>
+            <input type="text" id="phoneNumber" placeholder="Enter your phone number or email" required>
+
+            <label for="threshold">Notify me when exchange rate is above:</label>
+            <input type="number" id="threshold" placeholder="Enter the threshold value" required>
+
+            <button id="subscribeBtn">Subscribe for Alerts</button>
+        </div>
+
+        <div class="exchange-rates">
+            <h2>Current Exchange Rates</h2>
+            <p id="currentRates">Loading...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
